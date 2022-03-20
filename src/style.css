@@ -3,9 +3,16 @@ p {
   font-family: Lato;
 }
 
+h1 {
+  color: #fff;
+}
 body {
   background-color: #252850;
 }
 
+a {
+  color: #fff;
+  font-size: 32px;
+}
 .main {
 }

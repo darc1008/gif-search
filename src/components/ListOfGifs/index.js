@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Gif from './Gif';
+import Gif from '../Gif/index.js';
 import getGifs from '../services/getGifs';
+import './ListOfGifs.css';
 export default function ListOfGifs({ params }) {
   const [gifs, setGifs] = useState([]);
   const { keySearch } = params;
@@ -11,12 +12,16 @@ export default function ListOfGifs({ params }) {
     [keySearch]
   );
 
-  return gifs.map((singleGif) => (
-    <Gif
-      key={singleGif.id}
-      title={singleGif.title}
-      id={singleGif.id}
-      url={singleGif.url}
-    />
-  ));
+  return (
+    <div className="ListOfGifs">
+      {gifs.map((singleGif) => (
+        <Gif
+          key={singleGif.id}
+          title={singleGif.title}
+          id={singleGif.id}
+          url={singleGif.url}
+        />
+      ))}
+    </div>
+  );
 }

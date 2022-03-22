@@ -15,4 +15,6 @@ a {
   font-size: 32px;
 }
 .main {
+  padding: 20px;
+  width: 960px;
 }

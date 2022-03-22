@@ -9,3 +9,4 @@ export default function Gif({ title, id, url }) {
     </a>
   );
 }
+  
